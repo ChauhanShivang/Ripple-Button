@@ -15,18 +15,20 @@ html{
     display:flex;
     justify-content: center;
     align-items: center;
+    transition: background-color .5s;
 }
 .btn{
     width:30rem;
     height: 15rem;
     border: .2rem solid white;
     background-color: white;
-    position:absolute;
+    position:relative;
     border-radius: 10rem;
     display:flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    z-index: 100;
 }
 
 .btn span{
@@ -36,6 +38,7 @@ html{
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: .2rem;
+    z-index: 150;
 }
 
 .ripple{
@@ -46,6 +49,7 @@ html{
     border-radius: 10rem;
     transform: translate(-50%,-50%);
     animation: rippleanimation .5s forwards;
+    z-index: 50;
 }
 
 @keyframes rippleanimation{
@@ -54,7 +58,8 @@ html{
         height: 0;
     }
     100%{
-        width:210%;
-        height: 210%;
+        width:1000%;
+        height: 1000%;
+        /* z-index: 50; */
     }
 }
