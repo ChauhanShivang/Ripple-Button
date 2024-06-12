@@ -1,0 +1,60 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+html{
+    font-size: 62.5%;
+}
+.container{
+    width:100%;
+    height:100vh;
+    background-color: rgb(29, 29, 52);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn{
+    width:30rem;
+    height: 15rem;
+    border: .2rem solid white;
+    background-color: white;
+    position:absolute;
+    border-radius: 10rem;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.btn span{
+    position: relative;
+    color:rgb(29, 29, 52);
+    font-size: 3rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+}
+
+.ripple{
+    position: absolute;
+    width:100%;
+    height: 100%;
+    background-color: yellow;
+    border-radius: 10rem;
+    transform: translate(-50%,-50%);
+    animation: rippleanimation .5s forwards;
+}
+
+@keyframes rippleanimation{
+    0%{
+        width:0;
+        height: 0;
+    }
+    100%{
+        width:210%;
+        height: 210%;
+    }
+}
